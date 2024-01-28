@@ -1,0 +1,20 @@
+.item {
+  &__wrap {
+    width: 100vw;
+    height: 80vh;
+    background-color: rgb(198, 255, 196);
+    padding-top: 20vh;
+    display: flex;
+  }
+
+  &__image {
+    width: 80%;
+    &__wrap {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
