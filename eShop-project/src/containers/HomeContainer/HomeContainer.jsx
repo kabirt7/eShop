@@ -31,9 +31,9 @@ const HomeContainer = () => {
   // map that array such that it appears when the state is defined
   // add a loading state that is true when effect is called then false when content loaded
   return (
-    <div className={styles.carouselWrap}>
+    <>
       <HomeCarousel featuredStockArr={featured} />
-    </div>
+    </>
   );
 };
 

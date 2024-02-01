@@ -1,4 +1,11 @@
-import { collection, getDocs, getDoc, doc } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  getDoc,
+  doc,
+  query,
+  where,
+} from "firebase/firestore";
 import { db } from "../../config/firebase";
 
 export const getStockInfo = async () => {
@@ -19,17 +26,19 @@ export const getStockInfo = async () => {
 };
 
 export const getFeaturedStock = async () => {
-  const querySnapshot = await getDocs(collection(db, "stock"));
+  const stockRef = collection(db, "stock");
 
-  const tmpData = querySnapshot.docs.map((doc) => {
+  const stockQuery = query(stockRef, where("featured", "==", true));
+
+  const querySnapshot = await getDocs(stockQuery);
+  const dataToReturn = querySnapshot.docs.map((doc) => {
     return {
       id: doc.id,
       ...doc.data(),
     };
   });
 
-  const filteredData = tmpData.filter((doc) => doc.featured === true);
-  return filteredData;
+  return dataToReturn;
 };
 
 export const getStockByID = async (id, collection) => {
@@ -51,3 +60,14 @@ export const getStockByID = async (id, collection) => {
 //   // doc.data() is never undefined for query doc snapshots
 //   console.log(doc.id, " => ", doc.data());
 // });
+
+// const querySnapshot = await getDocs(stockRef);
+
+// const tmpData = querySnapshot.docs.map((doc) => {
+//   return {
+//     id: doc.id,
+//     ...doc.data(),
+//   };
+// });
+
+// const filteredData = tmpData.filter((doc) => doc.featured === true);

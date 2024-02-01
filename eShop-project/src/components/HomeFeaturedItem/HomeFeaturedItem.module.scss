@@ -1,11 +1,12 @@
 .featuredItem {
   height: 50vh;
-  width: 40vh;
+
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  flex: 0 0 40vh;
 
   &__image {
     height: 80%;
