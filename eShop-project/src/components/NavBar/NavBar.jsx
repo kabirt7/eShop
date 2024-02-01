@@ -1,14 +1,15 @@
 import styles from "./NavBar.module.scss";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <section className={styles.nav}>
       <h1>Header</h1>
       <ul className={styles.nav__menu}>
-        <li>Link</li>
-        <li>Link</li>
-        <li>Link</li>
-        <li>Link</li>
+        <NavLink to="/">Home</NavLink>
+        <NavLink>Link</NavLink>
+        <NavLink>Link</NavLink>
+        <NavLink>Link</NavLink>
       </ul>
     </section>
   );

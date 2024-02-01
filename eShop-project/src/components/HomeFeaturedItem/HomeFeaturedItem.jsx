@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./HomeFeaturedItem.module.scss";
 
-const HomeFeaturedItem = ({ name, id }) => {
+const HomeFeaturedItem = ({ name, id, image }) => {
   return (
-    <div>
+    <div className={styles.featuredItem}>
       <h1>{name}</h1>
-      <Link to={`/catalogue/${id}`}>More Info</Link>
+      <img src={image} className={styles.featuredItem__image} />
+      <Link to={`/catalogue/${id}`} className={styles.featuredItem__link}>
+        <h3>More Info</h3>
+      </Link>
     </div>
   );
 };

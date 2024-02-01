@@ -1,6 +1,7 @@
 .home {
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   background-color: bisque;
-  padding-top: 20vh;
+  background-image: url("../../assets/HomePhoto.jpg");
+  background-size: cover;
 }

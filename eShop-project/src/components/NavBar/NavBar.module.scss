@@ -1,6 +1,19 @@
 .nav {
-  height: 20vh;
-  background-color: aqua;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255);
+    // filter: blur(5px);
+    z-index: -1;
+  }
+  color: rgb(104, 75, 1);
+  height: 15vh;
   width: 100%;
   position: fixed;
   top: 0;

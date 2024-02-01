@@ -1,14 +1,16 @@
 .item {
   &__wrap {
     width: 100vw;
-    height: 80vh;
-    background-color: rgb(198, 255, 196);
-    padding-top: 20vh;
+    height: 85vh;
+    background-color: rgb(241, 228, 214);
+    padding-top: 15vh;
     display: flex;
+    align-items: center;
   }
 
   &__image {
-    width: 80%;
+    width: 50%;
+
     &__wrap {
       width: 50%;
       height: 100%;

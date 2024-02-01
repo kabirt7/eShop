@@ -1,4 +1,16 @@
 .carousel {
   width: 75vw;
-  height: 50vh;
+  height: 60vh;
+  // background-color: rgb(92, 48, 10, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__button {
+    height: 40%;
+    background-color: white;
+    border: none;
+    width: 3%;
+  }
 }
