@@ -7,8 +7,7 @@ const NavBar = () => {
       <h1>Header</h1>
       <ul className={styles.nav__menu}>
         <NavLink to="/">Home</NavLink>
-        <NavLink>Link</NavLink>
-        <NavLink>Link</NavLink>
+        <NavLink to="/cart">Cart</NavLink>
         <NavLink>Link</NavLink>
       </ul>
     </section>

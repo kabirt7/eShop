@@ -8,8 +8,8 @@ import {
 } from "firebase/firestore";
 import { db } from "../../config/firebase";
 
-export const getStockInfo = async () => {
-  const querySnapshot = await getDocs(collection(db, "stock"));
+export const getItems = async (collectionList) => {
+  const querySnapshot = await getDocs(collection(db, collectionList));
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.id, " => ", doc.data());
@@ -22,7 +22,9 @@ export const getStockInfo = async () => {
     };
   });
 
-  return dataToReturn;
+  const filteredData = dataToReturn.filter((item) => item.id !== "DONOTDELETE");
+
+  return filteredData;
 };
 
 export const getFeaturedStock = async () => {

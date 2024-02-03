@@ -8,6 +8,7 @@ import {
   collection,
   setDoc,
   increment,
+  deleteDoc,
 } from "firebase/firestore";
 import { db } from "../../config/firebase";
 import { getStockByID } from "./stock";
@@ -26,7 +27,9 @@ export const addToCart = async (itemID, color, size) => {
   // deconstruct info to add to object (if item isn't already in cart)
   const itemRef = await getStockByID(itemID, "stock");
   console.log(itemRef);
-  const { name } = itemRef;
+  const { name, imageURL } = itemRef;
+
+  console.log(name);
   const cleanedName = name.toLowerCase();
   console.log(cleanedName, color, size);
 
@@ -35,7 +38,6 @@ export const addToCart = async (itemID, color, size) => {
 
   // this is for if an existing cart item needs to be updated
   let cartItemRef = null;
-  let cartQty = null;
   const cartRefCheck = collection(db, "cart");
   let cartRef = doc(cartRefCheck);
 
@@ -45,9 +47,6 @@ export const addToCart = async (itemID, color, size) => {
   console.log(stockQty);
 
   // make an array that compares item passed through from ref with cart items
-  // const querySnapshot = await getDocs(collection(db, "cart"));
-  // const dataArray = querySnapshot.data();
-
   const cartQuery = query(
     cartRefCheck,
     where("itemName", "==", cleanedName),
@@ -64,28 +63,9 @@ export const addToCart = async (itemID, color, size) => {
   });
   console.log(cartItemData);
 
-  // querySnapshot.docs.map((doc) => ({
-  //   // id: doc.id,
-  //   ...doc.data(),
-  // }));
-
-  // console.log(dataArray);
-  // const filteredArray = dataArray.filter(
-  //   (doc) =>
-  //     doc.itemName == cleanedName &&
-  //     doc.itemColor == cleanedColor &&
-  //     doc.itemSize == cleanedSize
-  // );
-  // console.log(filteredArray);
-
-  // if the item isn't there then fA[0] will be undef
-
   const isItemAlreadyInCart = cartItemData[0] === undefined ? false : true;
 
   if (isItemAlreadyInCart) {
-    // this is wrong because each size and color needs its own new ID
-    // this id will be returned from the filtered array me thinks
-    // changed it, testing
     const cartItemID = cartItemData[0].id;
     cartItemRef = doc(db, "cart", cartItemID);
     await updateDoc(cartItemRef, {
@@ -98,15 +78,52 @@ export const addToCart = async (itemID, color, size) => {
       itemName: name,
       itemColor: color,
       itemSize: size,
+      itemImage: imageURL,
       quantity: 1,
     };
 
     await setDoc(cartRef, objToExport);
   }
-  // use increment
-  // use
+
   await updateDoc(stockItemRef, {
     [path]: increment(-1),
+  });
+};
+
+export const deleteFromCart = async (ID) => {
+  const cartItemRef = doc(db, "cart", ID);
+  const itemRef = await getStockByID(ID, "cart");
+  const stockRefCheck = collection(db, "stock");
+  console.log(itemRef);
+
+  if (itemRef.quantity > 1) {
+    await updateDoc(cartItemRef, {
+      quantity: increment(-1),
+    });
+  }
+  if (itemRef.quantity === 1) {
+    await deleteDoc(doc(db, "cart", ID));
+  }
+
+  const stockQuery = query(
+    stockRefCheck,
+    where("name", "==", itemRef.itemName)
+  );
+  const querySnapshot = await getDocs(stockQuery);
+  const cartItemData = querySnapshot.docs.map((doc) => {
+    return {
+      id: doc.id,
+      ...doc.data(),
+    };
+  });
+
+  console.log(cartItemData[0].id);
+
+  const stockItemRef = doc(db, "stock", cartItemData[0].id);
+
+  const path = `variants.${itemRef.itemColor}.${itemRef.itemSize}`;
+  await updateDoc(stockItemRef, {
+    [path]: increment(1),
   });
 };
 
@@ -120,37 +137,3 @@ export const getStockQty = async (itemColor, itemSize, itemID) => {
   console.log(qty);
   return qty;
 };
-
-// export const getCartQty = async (itemID) => {
-//   const itemRef = doc(db, "cart", itemID);
-//   const docSnap = await getDoc(itemRef);
-//   const info = docSnap.data();
-//   const qty = info.quantity;
-//   return qty;
-// };
-
-// export const searchCart = async (name, color, size) => {
-
-//   return querySnapshot;
-
-//   // const dataToReturn = querySnapshot.docs.map((doc) => {
-//   //   return {
-//   //     id: doc.id,
-//   //     ...doc.data(),
-//   //   };
-//   // });
-
-//   // return dataToReturn;
-// };
-
-// export const checkQuantity = async;
-// const path = `variants.${itemColor}.size.${itemSize}`;
-// const qty = await getQty(itemColor, itemSize, itemID);
-// if (qty > 0) {
-//   await updateDoc(itemRef, {
-//     [path]: qty - 1,
-//   });
-// }
-// find item needed using ID, make that a param
-// check its quantity - might have to use the function below
-// increment its quantity by use
