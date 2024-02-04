@@ -13,11 +13,28 @@
   &__container {
     width: 70vw;
     height: 60vh;
-    background-color: aqua;
+    background-color: white;
     margin-top: 15vh;
     display: flex;
     flex-direction: column;
     padding: 2vh;
     overflow: scroll;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    padding-bottom: 0;
+  }
+
+  &__footer {
+    height: 5vh;
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: aquamarine;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

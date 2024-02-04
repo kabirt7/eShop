@@ -7,17 +7,19 @@
   align-items: center;
 
   &__button {
-    height: 40%;
+    height: 10%;
     background-color: white;
     border: none;
     width: 3%;
+    // border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
   }
 
   &__wrap {
     width: 75vw;
     height: 60vh;
     // background-color: rgb(92, 48, 10, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
+    // background-color: rgba(0, 0, 0, 0.5);
     display: flex;
 
     align-items: center;
@@ -33,5 +35,6 @@
     gap: 30px;
     // padding: 0 15px;
     flex-wrap: nowrap;
+    padding: 10px;
   }
 }

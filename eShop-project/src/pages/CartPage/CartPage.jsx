@@ -25,9 +25,14 @@ const CartPage = () => {
                 size={item.itemSize}
                 color={item.itemColor}
                 setCartItemsToRender={setCartItemsToRender}
+                price={item.itemPrice}
               />
             );
           })}
+        <div className={styles.cart__footer}>
+          <h2>Total Price</h2>
+          <h3>hero</h3>
+        </div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ const CartPageItem = ({
   id,
   size,
   color,
-
+  price,
   setCartItemsToRender,
 }) => {
   const handleDeleteClick = async () => {
@@ -24,6 +24,7 @@ const CartPageItem = ({
       <p>{quantity}</p>
       <p>{size}</p>
       <p>{color}</p>
+      <p>{price}</p>
       <button onClick={handleDeleteClick}>Delete</button>
     </section>
   );

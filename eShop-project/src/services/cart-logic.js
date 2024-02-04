@@ -27,7 +27,7 @@ export const addToCart = async (itemID, color, size) => {
   // deconstruct info to add to object (if item isn't already in cart)
   const itemRef = await getStockByID(itemID, "stock");
   console.log(itemRef);
-  const { name, imageURL } = itemRef;
+  const { name, imageURL, price } = itemRef;
 
   console.log(name);
   const cleanedName = name.toLowerCase();
@@ -80,6 +80,7 @@ export const addToCart = async (itemID, color, size) => {
       itemSize: size,
       itemImage: imageURL,
       quantity: 1,
+      itemPrice: price,
     };
 
     await setDoc(cartRef, objToExport);

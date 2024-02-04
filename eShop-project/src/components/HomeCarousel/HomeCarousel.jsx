@@ -30,7 +30,7 @@ const HomeCarousel = ({ featuredStockArr }) => {
   return (
     <main className={styles.carousel}>
       <button className={styles.carousel__button} onClick={clickLeft}>
-        Hi
+        <FontAwesomeIcon icon="fa-solid fa-arrow-right" />
       </button>
       <div className={styles.carousel__wrap}>
         <div className={styles.carousel__container} ref={containerRef}>
