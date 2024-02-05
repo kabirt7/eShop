@@ -30,8 +30,6 @@ export const addToCart = async (itemID, color, size) => {
   const { name, imageURL, price } = itemRef;
 
   console.log(name);
-  const cleanedName = name.toLowerCase();
-  console.log(cleanedName, color, size);
 
   // this is for if a new cart object needs to be created
   let objToExport = null;
@@ -49,7 +47,7 @@ export const addToCart = async (itemID, color, size) => {
   // make an array that compares item passed through from ref with cart items
   const cartQuery = query(
     cartRefCheck,
-    where("itemName", "==", cleanedName),
+    where("itemName", "==", name),
     where("itemColor", "==", color),
     where("itemSize", "==", size)
   );

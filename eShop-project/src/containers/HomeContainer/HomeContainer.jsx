@@ -1,16 +1,11 @@
 import HomeCarousel from "../../components/HomeCarousel/HomeCarousel";
-import styles from "./HomeContainer.module.scss";
-import { getFeaturedStock } from "../../services/stock";
+import { getFeaturedStock, toggleFavourite } from "../../services/stock";
 import { useEffect, useState } from "react";
-import { setLocalesAsync } from "@expo/config-plugins/build/ios/Locales";
-// useEffect(() => {
-//   querySnapshot();
-// }, []);
 
 const HomeContainer = () => {
-  // useEffect(() => {
-  //   querySnapshot();
-  // }, []);
+  const togFav = async (ID) => {
+    await toggleFavourite(ID);
+  };
 
   const [featured, setFeatured] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -21,18 +16,12 @@ const HomeContainer = () => {
     getFeaturedStock()
       .then((res) => setFeatured(res))
       .catch((e) => setError(e))
-      .finally(setLoading(false));
-  }, []);
+      .finally(() => setLoading(false)); // Corrected the finally block
+  }, [togFav]);
 
-  // usestate
-  // useeffect
-  // call get featured content on startup
-  // set a state with that featured array
-  // map that array such that it appears when the state is defined
-  // add a loading state that is true when effect is called then false when content loaded
   return (
     <>
-      <HomeCarousel featuredStockArr={featured} />
+      <HomeCarousel featuredStockArr={featured} togFav={togFav} />
     </>
   );
 };

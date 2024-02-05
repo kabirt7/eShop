@@ -1,14 +1,22 @@
 import CardPageItem from "../../components/CartPageItem/CartPageItem";
-import { getItems } from "../../services/stock";
+import { getItems, getTotalPrice } from "../../services/stock";
 import styles from "./CartPage.module.scss";
 import { useEffect, useState } from "react";
 
 const CartPage = () => {
   const [cartItemsToRender, setCartItemsToRender] = useState(null);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     getItems("cart").then((res) => setCartItemsToRender(res));
-  }, []);
+    getTotalPrice().then((res) => {
+      if (res === 0) {
+        setTotalPrice(0);
+      } else {
+        setTotalPrice(res);
+      }
+    });
+  }, [cartItemsToRender]);
   return (
     <section className={styles.cart}>
       <div className={styles.cart__container}>
@@ -26,12 +34,14 @@ const CartPage = () => {
                 color={item.itemColor}
                 setCartItemsToRender={setCartItemsToRender}
                 price={item.itemPrice}
+                setTotalPrice={setTotalPrice}
+                cartItemsToRender={cartItemsToRender}
               />
             );
           })}
         <div className={styles.cart__footer}>
           <h2>Total Price</h2>
-          <h3>hero</h3>
+          <h3>{totalPrice}</h3>
         </div>
       </div>
     </section>

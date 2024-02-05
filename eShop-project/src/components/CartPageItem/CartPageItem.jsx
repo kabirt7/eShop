@@ -1,6 +1,7 @@
 import styles from "./CartPageItem.module.scss";
 import { deleteFromCart } from "../../services/cart-logic";
-import { getItems } from "../../services/stock";
+import { getItems, getTotalPrice } from "../../services/stock";
+import { useEffect } from "react";
 
 const CartPageItem = ({
   name,
@@ -10,13 +11,23 @@ const CartPageItem = ({
   size,
   color,
   price,
+
   setCartItemsToRender,
+  setTotalPrice,
 }) => {
   const handleDeleteClick = async () => {
     await deleteFromCart(id);
+
     const newItems = await getItems("cart");
     setCartItemsToRender(newItems);
   };
+
+  useEffect(() => {
+    getTotalPrice().then((res) => {
+      setTotalPrice(res);
+      console.log(res);
+    });
+  }, [handleDeleteClick]);
   return (
     <section className={styles.cartItemWrap}>
       <img src={image} alt="item image" />
