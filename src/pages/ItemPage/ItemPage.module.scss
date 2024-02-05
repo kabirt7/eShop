@@ -1,0 +1,23 @@
+.item {
+  &__wrap {
+    width: 100vw;
+    height: 85vh;
+    background-color: rgb(241, 228, 214);
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    width: 50%;
+
+    &__wrap {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

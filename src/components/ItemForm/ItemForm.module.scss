@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+  background-color: white;
+  height: auto;
+  padding: 10%;
+  gap: 4vh;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  &__wrap {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+
+    &__option {
+      width: 80%;
+    }
+  }
+  h1 {
+    font-size: 3vw;
+  }
+  p {
+    font-size: 1.5vw;
+  }
+
+  button {
+    width: 100%;
+  }
+}
