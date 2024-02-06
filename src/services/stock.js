@@ -73,11 +73,6 @@ export const getStockByID = async (id, collection) => {
   return obj;
 };
 
-// const cartItemID = cartItemData[0].id;
-// cartItemRef = doc(db, "cart", cartItemID);
-// await updateDoc(cartItemRef, {
-//   quantity: increment(1),
-
 export const toggleFavourite = async (ID) => {
   console.log(ID);
   const itemRef = doc(db, "stock", ID);
@@ -88,24 +83,3 @@ export const toggleFavourite = async (ID) => {
     favourited: !currentStatus,
   });
 };
-
-// import { collection, query, where, getDocs } from "firebase/firestore";
-
-// const q = query(collection(db, "cities"), where("capital", "==", true));
-
-// const querySnapshot = await getDocs(q);
-// querySnapshot.forEach((doc) => {
-//   // doc.data() is never undefined for query doc snapshots
-//   console.log(doc.id, " => ", doc.data());
-// });
-
-// const querySnapshot = await getDocs(stockRef);
-
-// const tmpData = querySnapshot.docs.map((doc) => {
-//   return {
-//     id: doc.id,
-//     ...doc.data(),
-//   };
-// });
-
-// const filteredData = tmpData.filter((doc) => doc.featured === true);

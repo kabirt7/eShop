@@ -12,8 +12,8 @@ const NavBar = () => {
       </div>
       <ul className={styles.nav__menu}>
         <NavLink to="/">Home</NavLink>
+        <NavLink to="/featured">Featured</NavLink>
         <NavLink to="/cart">Cart</NavLink>
-        <NavLink>Link</NavLink>
       </ul>
     </section>
   );

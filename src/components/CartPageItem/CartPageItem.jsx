@@ -11,7 +11,6 @@ const CartPageItem = ({
   size,
   color,
   price,
-
   setCartItemsToRender,
   setTotalPrice,
 }) => {
@@ -27,7 +26,7 @@ const CartPageItem = ({
       setTotalPrice(res);
       console.log(res);
     });
-  }, [handleDeleteClick]);
+  }, []);
   return (
     <section className={styles.cartItemWrap}>
       <img src={image} alt="item image" />
