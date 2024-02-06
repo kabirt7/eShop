@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { getColorArray } from "../../services/populate-form-logic";
 import styles from "./ItemForm.module.scss";
 
 const ItemForm = ({ tryAddToCart, stockItem }) => {
   const { register, handleSubmit } = useForm();
-  // const [colors, setColors] = useState(null);
-  // const [sizes, setSizes] = useState(null);
+
+  const getColorArray = (obj) => {
+    const colorArr = Object.keys(obj.variants);
+    return colorArr;
+  };
+
   const colorArr = getColorArray(stockItem);
   const sizeArr = stockItem.sizes;
 
