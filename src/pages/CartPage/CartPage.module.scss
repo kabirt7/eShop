@@ -1,14 +1,11 @@
 .cart {
   width: 100vw;
   height: 100vh;
-  background-color: bisque;
+  background-color: rgb(239, 246, 245);
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &__title {
-  }
 
   &__container {
     width: 70vw;
