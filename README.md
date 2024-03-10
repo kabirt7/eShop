@@ -11,7 +11,7 @@ https://eclectic-baklava-859501.netlify.app
 
 # TO FIX
 
-- new Carousel component is needed. Current approach is buggy and inefficient 
+- new Carousel component is needed. Current approach is buggy and inefficient. Scrolling doesn't feel smooth.
 - Overall styling upgrade. Doesn’t look sleek enough
 - Favourite Button on cart page submitting. Need fix and add this functionality to the product page
 
