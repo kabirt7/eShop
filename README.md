@@ -2,7 +2,7 @@
 
 # HOSTING
 
-https://eclectic-baklava-859501.netlify.app/featured
+https://eclectic-baklava-859501.netlify.app
 
 # MVP
 
