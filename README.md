@@ -1,6 +1,6 @@
 ## eCommerce Shop
 
-# HOSTING
+# Hosting
 
 https://eclectic-baklava-859501.netlify.app
 
