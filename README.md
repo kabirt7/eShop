@@ -25,7 +25,6 @@ https://eclectic-baklava-859501.netlify.app
 ## Logic & Design Approach
 - I put a lot of thought into how I wanted my selected variants to be added to the Cart Collection (from the Stock Collection)
 - I opted for storing the variant data in Objects in the Stock Collection that is then used (depending on the selection) to create a unique cart object (in the Cart Collection) that can then also be deleted back into the initial object in the Stock Collection.
-- the Object looks as follows: 
 - I’ve used Firestore specific logic to enhance readability e.g. the where keyword
 - Going for a minimalistic design, trying to highlight the unique pieces - still needs further updates
 
