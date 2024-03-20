@@ -14,6 +14,7 @@ https://eclectic-baklava-859501.netlify.app
 - new Carousel component is needed. Current implementation is broken. I have a better implementation in mind that will be live very soon. Also, scrolling doesn't feel smooth.
 - Overall styling upgrade. Doesn’t look sleek at all. Colors I'm happy with though.
 - Favourite Button on cart page submitting. Need fix and add this functionality to the product page
+- Need to add Product bios
 
 ## Features
 
