@@ -64,9 +64,9 @@ When the stock item is added to the cart. It first checks to see an item with th
 ```json
 {
   "id": "CDi7PNf1NkhwBVriZpUl",
-  "itemColor": "white",
+  "itemColor": "red",
   "itemImage": "https://rahulmishra.in/cdn/shop/products/47_db262dc0-a88d-4e17-8fb0-86f63d93f149_1800x1800.jpg?v=1663747639",
-  "itemName": "Embroidered Trench Coat",
+  "itemName": "Shirley Lehenga",
   "itemPrice": "$1200",
   "itemSize": "medium",
   "quantity": 1
