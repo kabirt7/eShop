@@ -34,7 +34,7 @@ src/services/cart-logic.js and src/services/stock.js for my exact implementation
 
 ### STOCK COLLECTION
 
-Below is an example of the product configuration for the "Shirley Lehenga" in the Stock Collection. This configuration includes details such as product ID, name, price, availability of sizes, and variant information. This info is parsed into a form on the unique product page (under the Catalogue tab, click see more on any of the articles to see an example of this).
+Below is an example of the product configuration for the "Shirley Lehenga" in the Stock Collection. This configuration includes details such as product ID, name, price, availability of sizes, and variant information. This info is parsed into a form on the unique product page (under the Featured tab, click "More Info" on any of the articles to see an example of this).
 
 ```json
 {
