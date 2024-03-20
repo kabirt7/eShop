@@ -61,10 +61,9 @@ Below is an example of the product configuration for the "Shirley Lehenga" in th
 
 When the stock item is added to the cart. It first checks to see an item with the same name, color and size is already in the cart. If it is, it will simply incremenent the amount of this item in the cart (while decrementing the item quantity in the Stock Collection). If a new cart item is needed, an item with a unique ID is generated. Subsequent logic allows the cart item to push the item back into the Stock Collection if it's removed from the cart. Below is an example of a unique Cart Collection item.
 
-The id, CDi7PNf1NkhwBVriZpUl, is used by Firestore as the name of the object hence it is now inside the object data
-
 ```json
 {
+  "id": "CDi7PNf1NkhwBVriZpUl",
   "itemColor": "white",
   "itemImage": "https://rahulmishra.in/cdn/shop/products/47_db262dc0-a88d-4e17-8fb0-86f63d93f149_1800x1800.jpg?v=1663747639",
   "itemName": "Embroidered Trench Coat",
