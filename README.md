@@ -52,7 +52,7 @@ Below is an example of the product configuration for the "Shirley Lehenga". This
     }
   }
 }
-
+```
 
 ## Problems
 - Did not expect the carousel to give me so much grief
