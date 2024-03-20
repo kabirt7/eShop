@@ -13,7 +13,7 @@ https://eclectic-baklava-859501.netlify.app
 
 - new Carousel component is needed. Current implementation is broken. I have a better implementation in mind that will be live very soon. Also, scrolling doesn't feel smooth.
 - Overall styling upgrade. Doesn’t look sleek at all. Colors I'm happy with though.
-- Favourite Button on cart page submitting. Need fix and add this functionality to the product page
+- Favourite Button on cart page submitting. Need fix and add this functionality to the product page.
 - Need to add Product bios
 
 ## Features
@@ -34,7 +34,7 @@ src/services/cart-logic.js and src/services/stock.js for my exact implementation
 
 ### STOCK COLLECTION
 
-Below is an example of the product configuration for the "Shirley Lehenga" in the Stock Collection. This configuration includes details such as product ID, name, price, availability of sizes, and variant information.
+Below is an example of the product configuration for the "Shirley Lehenga" in the Stock Collection. This configuration includes details such as product ID, name, price, availability of sizes, and variant information. This info is parsed into a form on the unique product page e.g. https://eclectic-baklava-859501.netlify.app/catalogue/AegVY3N3DI2oCZ3jrV3a
 
 ```json
 {
