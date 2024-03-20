@@ -31,6 +31,8 @@ https://eclectic-baklava-859501.netlify.app
 
 ## Product Configuration Example
 
+src/services/cart-logic.js and src/services/stock.js for my exact implementation
+
 ### STOCK COLLECTION
 
 Below is an example of the product configuration for the "Shirley Lehenga" in the Stock Collection. This configuration includes details such as product ID, name, price, availability of sizes, and variant information.
