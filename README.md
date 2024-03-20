@@ -30,7 +30,7 @@ https://eclectic-baklava-859501.netlify.app
 
 ## Product Configuration Example
 
-Below is an example of the product configuration for the "Shirley Lehenga". This configuration includes details such as product ID, name, price, availability of sizes, and variant information. This JSON structure can be used to configure products in our inventory system.
+Below is an example of the product configuration for the "Shirley Lehenga". This configuration includes details such as product ID, name, price, availability of sizes, and variant information.
 
 ```json
 {
