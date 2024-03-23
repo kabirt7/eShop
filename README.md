@@ -11,10 +11,15 @@ https://eclectic-baklava-859501.netlify.app
 
 ## Known Problems
 
-- new Carousel component is needed. Current implementation is broken. I have a better implementation in mind that will be live very soon. Also, scrolling doesn't feel smooth.
+- Home needs to use a reusable Carousel 
 - Overall styling upgrade. Doesn’t look sleek at all. Colors I'm happy with though.
 - Favourite Button on cart page submitting. Need to fix and add this functionality to the product page.
 - Need to add Product bios
+
+## Carousel Fix
+
+- my current implementation of the Carousel on the Home Page is broken. Re rendering the image based on the index instead of pre-loading them all and scrolling through is not a good isea
+- I will fix in future but I'm more focused on learning from this in future projects for the moment. 
 
 ## Features
 
