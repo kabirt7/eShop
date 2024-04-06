@@ -81,5 +81,16 @@ When the stock item is added to the cart. It first checks to see an item with th
 
 ## Problems
 - Did not expect the carousel to give me so much grief
-- The process of adding and deleting to the cart was also quite complicated 
+- The process of adding and deleting to the cart was also quite complicated
+
+## CHANGE LOG
+
+### April 6th
+- Fixed Carousel Component
+- Started the styling upgrades
+
+TMO:
+- fix the placement of the favourited star
+- fix the Item Page and fix the Cart Page Styling
+- fix the functionality of the favourited button on the Item Page
 
