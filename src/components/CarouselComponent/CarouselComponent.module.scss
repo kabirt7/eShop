@@ -1,0 +1,76 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 1em;
+  margin: 0;
+  padding: 0;
+
+  &__wrapper {
+    display: flex;
+    transform: 0.5s ease;
+    height: 100vh;
+  }
+  &__slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+
+    &__image {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: top;
+      z-index: 9;
+    }
+  }
+
+  .carousel__slide:nth-child(1) {
+    .carousel__slide__image {
+      object-position: bottom;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #737373;
+
+    &__left {
+      left: 0.5em;
+    }
+
+    &__right {
+      right: 0.5em;
+    }
+  }
+
+  &__indicators {
+    position: absolute;
+    bottom: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  &__indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  &__active {
+    background-color: #ccc;
+  }
+}
