@@ -5,6 +5,8 @@
   margin: 1em;
   margin: 0;
   padding: 0;
+  height: 85vh;
+  padding-top: 15vh;
 
   &__wrapper {
     display: flex;
@@ -22,6 +24,7 @@
       object-fit: cover;
       object-position: top;
       z-index: 9;
+      transform: translateY(-15vh);
     }
   }
 

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from "react";
 import styles from "./CarouselComponent.module.scss";
 
-export const CarouselComponent = ({ children = [], auto = false }) => {
+export const CarouselComponent = ({ children = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNavigation = (direction) => {
@@ -14,17 +14,6 @@ export const CarouselComponent = ({ children = [], auto = false }) => {
     }
     setCurrentIndex(newIndex);
   };
-
-  useEffect(() => {
-    if (!auto) {
-      return;
-    }
-    const interval = setInterval(() => {
-      handleNavigation("right");
-    }, 2000);
-
-    return () => clearInterval(interval);
-  });
 
   const slidesWithDuplicate = [...children, children[0]];
 

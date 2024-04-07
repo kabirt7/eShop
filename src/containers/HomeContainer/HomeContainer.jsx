@@ -1,4 +1,4 @@
-import HomeCarousel from "../../components/HomeCarousel/HomeCarousel";
+import FeaturedCarousel from "../../components/FeaturedCarousel/FeaturedCarousel";
 import { getFeaturedStock, toggleFavourite } from "../../services/stock";
 import { useEffect, useState } from "react";
 
@@ -11,20 +11,16 @@ const HomeContainer = () => {
   };
 
   const [featured, setFeatured] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
     getFeaturedStock()
       .then((res) => setFeatured(res))
-      .catch((e) => setError(e))
-      .finally(() => setLoading(false));
+      .catch((error) => console.log(error));
   }, [toggleFavTrigger]);
 
   return (
     <>
-      <HomeCarousel featuredStockArr={featured} togFav={togFav} />
+      <FeaturedCarousel featuredStockArr={featured} togFav={togFav} />
     </>
   );
 };

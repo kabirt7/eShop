@@ -35,7 +35,12 @@ const CartPageItem = ({
       <p>{size}</p>
       <p>{color}</p>
       <p>{price}</p>
-      <button onClick={handleDeleteClick}>Delete</button>
+      <button
+        className={styles.cartItemWrap__button}
+        onClick={handleDeleteClick}
+      >
+        Delete
+      </button>
     </section>
   );
 };

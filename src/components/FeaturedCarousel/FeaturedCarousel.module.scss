@@ -1,0 +1,40 @@
+.carousel {
+  width: 100vw;
+  height: 85%;
+  padding-top: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__button {
+    height: 10%;
+    background-color: white;
+    border: none;
+    width: 3%;
+    border-radius: 10px;
+  }
+
+  &__button:hover {
+    background-color: lightgray;
+  }
+
+  &__wrap {
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    gap: 30px;
+    flex-wrap: nowrap;
+    padding: 10px;
+    padding-right: 2vw;
+  }
+}

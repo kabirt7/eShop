@@ -1,5 +1,18 @@
+.cartItemWrap *:not(img) {
+  flex: 0 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .cartItemWrap {
   display: flex;
   height: 20%;
   justify-content: space-between;
+
+  &__button {
+    flex: 0 0 1%;
+  }
 }
