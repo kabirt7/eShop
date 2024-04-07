@@ -1,5 +1,7 @@
 # eCommerce Shop
 
+![demo of project](demo.gif)
+
 ## Hosting
 
 https://eclectic-baklava-859501.netlify.app
