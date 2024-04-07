@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import HomeFeaturedItem from "../HomeFeaturedItem/HomeFeaturedItem";
-import styles from "./HomeCarousel.module.scss";
+import FeaturedItem from "../FeaturedItem/FeaturedItem";
+import styles from "./FeaturedCarousel.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -39,7 +39,7 @@ const HomeCarousel = ({ featuredStockArr, togFav }) => {
         <div className={styles.carousel__container} ref={containerRef}>
           {featuredStockArr &&
             featuredStockArr.map((stock) => (
-              <HomeFeaturedItem
+              <FeaturedItem
                 name={stock.name}
                 id={stock.id}
                 image={stock.imageURL}
