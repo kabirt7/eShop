@@ -9,18 +9,6 @@ https://eclectic-baklava-859501.netlify.app
 - Home Page with a grid of products, carousel of featured products and product pages with id param
 - Firestore Database containing info about quantity, variants etc
 
-## Known Problems
-
-- Home needs to use a reusable Carousel 
-- Overall styling upgrade. Doesn’t look sleek at all. Colors I'm happy with though.
-- Favourite Button on cart page submitting. Need to fix and add this functionality to the product page.
-- Need to add Product bios
-
-## Carousel Fix
-
-- my current implementation of the Carousel on the Home Page is broken. Re rendering the image based on the index instead of pre-loading them all and scrolling through is not a good isea
-- I will fix in future but I'm more focused on learning from this in future projects for the moment. 
-
 ## Features
 
 - Functional cart with Firestorm-specific logic
@@ -80,17 +68,28 @@ When the stock item is added to the cart. It first checks to see an item with th
 ```
 
 ## Problems
-- Did not expect the carousel to give me so much grief
-- The process of adding and deleting to the cart was also quite complicated
+
+- Home needs to use a reusable Carousel 
+- Need to add Product bios
+
 
 ## CHANGE LOG
 
 ### April 6th
-- Fixed Carousel Component
+- Fixed Carousel Component on the Home Page
 - Started the styling upgrades
 
 TMO:
 - fix the placement of the favourited star
+- fix the Item Page and fix the Cart Page Styling
+- fix the functionality of the favourited button on the Item Page
+
+### April 7th
+- Featured Carousel made some styling changes to.
+- For the time being and this overall styling update, I'm going to leave the older implementation of this Carousel that uses useRef and js container.scrollTo
+- In the next update, I will make the Carousel Component used on the home page, reusable and replace the FeaturedCarousel usage with this
+
+TO DO:
 - fix the Item Page and fix the Cart Page Styling
 - fix the functionality of the favourited button on the Item Page
 
