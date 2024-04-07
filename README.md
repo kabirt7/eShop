@@ -76,8 +76,8 @@ When the stock item is added to the cart. It first checks to see an item with th
 ## CHANGE LOG
 
 ### April 6th
-- Fixed Carousel Component on the Home Page
-- Started the styling upgrades
+- Updated the Carousel Component used on the Home Page. It was originally broken using a simplistic usage of useRef and scrollTo (similar to the FeaturedCarousel). I have changed it to be dependent on a currentIndex state and CSS transform. It is also infinitely scrolling now due to the modulo usage in the scroll logic.
+- Started the styling upgrades rollout
 
 TMO:
 - fix the placement of the favourited star
@@ -92,4 +92,5 @@ TMO:
 TO DO:
 - fix the Item Page and fix the Cart Page Styling
 - fix the functionality of the favourited button on the Item Page
+- fix how the Home page is centred
 
