@@ -1,6 +1,6 @@
 # eCommerce Shop
 
-![demo of project](demo.gif)
+![demo of project](demo_updated.gif)
 
 ## Hosting
 
