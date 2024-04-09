@@ -1,6 +1,6 @@
 # eCommerce Shop
 
-![demo of project](demo_updated.gif)
+![demo of project](demo_correct.gif)
 
 ## Hosting
 
@@ -69,9 +69,9 @@ When the stock item is added to the cart. It first checks to see an item with th
 }
 ```
 
-## Problems
+## Future Changes
 
-- Home needs to use a reusable Carousel 
+- The featured Carousel uses worse implementation of a Carousel component. It uses scrollTo instead of depending on state indexing and transformation. I am going to make the Home Carousel reusable so that the Featured one can share the updated version
 - Need to add Product bios
 
 
