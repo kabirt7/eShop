@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   height: 85vh;
-  padding-top: 15vh;
+  margin-top: 15vh;
 
   &__wrapper {
     display: flex;
@@ -16,21 +16,20 @@
   &__slide {
     flex: 0 0 100%;
     max-width: 100%;
-    width: 100%;
+    width: 85%;
 
     &__image {
       width: 100vw;
-      height: 100vh;
+      height: 85vh;
       object-fit: cover;
-      object-position: top;
+      object-position: bottom;
       z-index: 9;
-      transform: translateY(-15vh);
     }
   }
 
   .carousel__slide:nth-child(1) {
     .carousel__slide__image {
-      object-position: bottom;
+      object-position: top;
     }
   }
 
@@ -43,7 +42,7 @@
     border: none;
     cursor: pointer;
     font-size: 20px;
-    color: #737373;
+    color: #dd8989;
 
     &__left {
       left: 0.5em;

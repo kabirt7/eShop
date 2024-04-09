@@ -6,7 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3vw;
 
   &__container {
     width: 70vw;
@@ -21,6 +22,10 @@
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
     padding-bottom: 0;
     gap: 5%;
+  }
+
+  h3 {
+    font-weight: lighter;
   }
 
   &__footer {
