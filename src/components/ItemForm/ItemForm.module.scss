@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 70%;
   flex-direction: column;
   background-color: white;
   height: auto;
@@ -18,23 +18,56 @@
     justify-content: center;
   }
 
+  &__header {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 1vw;
+  }
+
   &__input {
     width: 60%;
     display: flex;
     justify-content: space-between;
+    height: 2vw;
+    align-items: center;
+    label {
+      font-size: 1vw;
+    }
 
     &__option {
       width: 80%;
+      border-radius: 50vw;
+      height: 80%;
+      font-size: 1vw;
+      padding-left: 0.3vw;
     }
   }
+
   h1 {
-    font-size: 3vw;
+    font-size: 2.5vw;
+    font-family: Arial, Helvetica, sans-serif;
   }
+
   p {
     font-size: 1.5vw;
+    font-family: "Open Sans", sans-serif;
   }
 
   button {
     width: 100%;
+    border-radius: 5vw;
+    border: none;
+    padding: 0.5vw 0.5vw;
+    font-size: 1vw;
   }
+
+  button:hover {
+    background-color: rgb(189, 189, 189);
+  }
+}
+
+.star {
+  width: 2.5vw;
+  height: 2.5vw;
 }
